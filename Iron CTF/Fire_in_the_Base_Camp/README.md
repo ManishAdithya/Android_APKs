@@ -1,6 +1,6 @@
 It was a fun mix of Adnroid reverse engineering and exploring the URL endpoints, leading to an unexpected twist that unlocked the flag. Let's dive in!
 
-## Initial Observations
+# Initial Observations
 
 As usual, I started by inspecting the **AndroidManifest.xml**. It showed just one activity — MainActivity, which seemed straightforward. Launching the app presented a simple dice interface, with a button labeled "Roll Dice." Every time I clicked the button, a random dice number would appear.
 
@@ -34,7 +34,7 @@ if (MainActivity.this.count.intValue() == 9999999) {
 
 Clearly, there had to be an easier way than manually clicking the button millions of times, so I considered two possible approaches:
 
-## Two Potential Paths
+# Two Potential Paths
 
 # Using Frida to Manipulate Variables:
 
@@ -46,7 +46,7 @@ Alternatively, I could decompile the APK, navigate to the code responsible for c
 
 But then, I noticed something intriguing...
 
-## A New Approach: Firebase Investigation
+# A New Approach: Firebase Investigation
 
 While exploring the app, I realized the flag was being fetched from a Firebase URL. 
 
@@ -72,7 +72,7 @@ I quickly navigated to the strings.xml file, where I found the Firebase URL, "ht
 
 At this point, I wondered: Could there be any open endpoints or exposed data on this Firebase instance?
 
-## Dirsearch for the Win
+# Dirsearch for the Win
 
 To investigate further, I ran dirsearch on the Firebase URL to check for any accessible endpoints. To my surprise, I found something at the evergreen /.json extension. 
 
@@ -81,7 +81,7 @@ To investigate further, I ran dirsearch on the Firebase URL to check for any acc
 
 And there it was—the flag, exposed in plain text!
 
-## The Flag
+# The Flag
 
 Accessing this open .json endpoint allowed me to retrieve the flag directly, bypassing both the dice game logic and any modification of the app itself.
 
