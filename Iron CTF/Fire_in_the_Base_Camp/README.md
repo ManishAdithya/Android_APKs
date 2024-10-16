@@ -36,11 +36,11 @@ Clearly, there had to be an easier way than manually clicking the button million
 
 # Two Potential Paths
 
-# Using Frida to Manipulate Variables:
+## Using Frida to Manipulate Variables:
 
 With Frida, I could easily intercept the app's logic and set the number of clicks directly to 9999999. This would trigger the flag immediately. This method seemed efficient, allowing me to bypass the app's logic in real-time.
 
-# Modifying the APK Using Smali:
+## Modifying the APK Using Smali:
 
 Alternatively, I could decompile the APK, navigate to the code responsible for checking the number of clicks, and modify the app to set the number directly to 1 instead of 9999999. By patching the app and reinstalling the modified APK, the flag would appear after just one click.
 
