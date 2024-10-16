@@ -6,9 +6,11 @@ The "Don't Overreact" APK is a lightweight Android application with minimal func
 
 Navigating to the MainActivity within the decompiled code reveals minimal content. The MainActivity doesn't contain any substantial logic beyond initializing the app and calling React Native components. Here’s a snippet of the code:
 
-![image](https://github.com/user-attachments/assets/472d5a13-a0e1-4abd-94ec-d403fb555a5b)
+![image](https://github.com/user-attachments/assets/ce789791-5e29-42af-a617-36f0c3680c94)
 
 The app doesn’t seem to perform any local operations that could lead us to the flag. Instead, it directly relies on React Native logic, meaning that the core logic and possibly the flag are hidden within the React code.
+
+![image](https://github.com/user-attachments/assets/52207c76-6c7f-4d66-a287-3ee839316b7f)
 
 
 ### Investigating React Native Code
@@ -16,13 +18,14 @@ Upon deeper inspection of the index.android.bundle file located in the assets/ d
 
 We scan through the bundle file for any suspicious strings, comments, or variables that might indicate the presence of a flag. After searching for patterns like flag, key, or any encoded data, we come across an interesting Base64 encoded string.
 
-![image](https://github.com/user-attachments/assets/1cf8a08f-cc3b-4f20-81b7-0b38396dcaf7)
+![image](https://github.com/user-attachments/assets/9f5969f4-23a0-4759-840b-fcfb28b18cce)
+
 
 ### Decoding the Base64 String
 
 To uncover the contents of the Base64 string, we use an online decoder
 
-![image](https://github.com/user-attachments/assets/f8e2c6b7-553f-4607-ae69-32bad591684b)
+![image](https://github.com/user-attachments/assets/0339bb9d-515e-4ed0-8d65-c0443db12de8)
 
 
 **Extracting the Flag**

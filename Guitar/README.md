@@ -4,23 +4,23 @@ This APK challenge involves analyzing a simple Android application that plays di
 
 Open the APK and check the AndroidManifest.xml. You'll notice that the app only contains a single activity, MainActivity.
 
-![image](https://github.com/user-attachments/assets/63f74ed0-8279-4d01-bf38-e1e52457298a)
+![image](https://github.com/user-attachments/assets/2bc7feaa-6914-4b21-b0e1-f45e58d097a0)
 
 Launch the app and observe its behavior. The app consists of buttons that play different guitar sounds, with no other apparent functionality or visible clues.
 
-![image](https://github.com/user-attachments/assets/088d2f4e-d396-417d-b2a2-5a53b399d1bc)
+![image](https://github.com/user-attachments/assets/ecc14d68-3396-4d9d-8d2f-8c1a30f481fe)
 
 To locate the hidden flag, search for possible storage locations within the APK. One key file to examine is strings.xml, which is typically found in the res/values directory.
 
 In the strings.xml file, a string labeled "secret string" was discovered. This string contains a Base64-encoded value.
 
-![image](https://github.com/user-attachments/assets/f4761c2d-2ba1-4e51-a8d7-dab5c0881ea1)
+![image](https://github.com/user-attachments/assets/dffef335-49c3-4ac9-b56c-857c11ea4894)
 
 ### Decoding the Base64 String
 
 To uncover the contents of the Base64 string, we use an online decoder
 
-![image](https://github.com/user-attachments/assets/f1e735c0-273e-44a1-a6c8-55d25759cb46)
+![image](https://github.com/user-attachments/assets/b446d70d-3ebb-452d-b279-420cca270c0e)
 
 The decoded flag is: flag{46afd4f8d2ca595c09e4aa297b84acc1}
 
