@@ -42,8 +42,8 @@ This had me puzzled, but then I realized the code was likely being imported from
 
 If you're like me and have only scratched the surface of Flutter reversing, you know how intimidating it can be. My knowledge of Flutter internals was basic, and I knew I had to tread carefully.I decompiled the app using apktool to view the app contents. The first place I checked was the lib directory, specifically under /secure_vault/lib/arm64-v8a/. As expected with most Flutter apps, I found two important files:
 
-	**1) libflutter.so (the core Flutter engine responsible for rendering and Dart execution)**
-	**2) libapp.so (containing the compiled Dart code of the app, including its business logic)**
+	1) libflutter.so (the core Flutter engine responsible for rendering and Dart execution)
+	2) libapp.so (containing the compiled Dart code of the app, including its business logic)
 	
 With my limited experience in Flutter reversing, I decided to focus on the libapp.so file since it usually holds the compiled Dart code for the app's actual functionality.
 
