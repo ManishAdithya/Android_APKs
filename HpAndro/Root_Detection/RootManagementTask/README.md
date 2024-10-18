@@ -62,6 +62,6 @@ By returning false, the app is tricked into thinking none of the root management
 To inject this script into the target app, use the following Frida command: **(make sure that the frida server is running in the emulator)**
 
 ```
-frida -U -n hpandro.android.security -l Root_Management_Task.js
+frida -U -l Root_Management_Task.js -f hpandro.android.security 
 ```
 Once injected, Frida will intercept the root detection methods and prevent the app from detecting that the device is rooted.
