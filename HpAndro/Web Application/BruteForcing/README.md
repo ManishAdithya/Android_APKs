@@ -79,5 +79,5 @@ On running this script for a while, we get the username as **"admin"** and passw
 ## Flag
 The flag is given when you give the right username and password:
 
-**Flag - hpandro{Brute.zf7zoSEUxvXQVfkCOolSx1gtRCAApNwE} **
+**Flag - hpandro{Brute.zf7zoSEUxvXQVfkCOolSx1gtRCAApNwE}**
 
