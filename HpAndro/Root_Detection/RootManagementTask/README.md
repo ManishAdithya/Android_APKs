@@ -57,7 +57,7 @@ By returning false, the app is tricked into thinking none of the root management
 
 ## Step-by-step Script Execution:
 
-![image](https://github.com/user-attachments/assets/94319499-cb85-4794-ad07-6c2e0889020a)
+![image](1.png)
 
 To inject this script into the target app, use the following Frida command: **(make sure that the frida server is running in the emulator)**
 
