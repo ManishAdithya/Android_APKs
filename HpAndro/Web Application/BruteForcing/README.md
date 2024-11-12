@@ -6,7 +6,7 @@ To access the webpage in a browser, I used HTTP Toolkit to capture the network t
 
 **URL: http://hpandro.raviramesh.info/bf.php**
 
-![image](1.pngs)
+![image](1.png)
 
 ## Step 2: Writing the bruteforce script
 
