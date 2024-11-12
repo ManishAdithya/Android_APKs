@@ -1,0 +1,1 @@
+## The solve for this challenge is very similar to the APKey. Wanna test yourself ? Feel free to . I have attached the JavaScript code to solve this challenge though. (Just in case you don't understand how to solve it. )
