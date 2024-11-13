@@ -8,7 +8,7 @@ To access the webpage in a browser, I used HTTP Toolkit to capture the network t
 
 ![image](1.png)
 
-## Step 2: Inspecting Local Storage
+## Step 2: Inspecting the webpage 
 
 After opening the page in a browser, I decoded the string given in the website:
 
@@ -16,7 +16,7 @@ After opening the page in a browser, I decoded the string given in the website:
 
 Next is the decryption, i directly pasted the hash in google and got the cracked value ---> **asimov**
 
-On entering these alues, i got the flag straight away.
+On entering these values, i got the flag straight away.
 
 ![image](2.png)
 
