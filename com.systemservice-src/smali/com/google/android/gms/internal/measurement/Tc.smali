@@ -1,0 +1,37 @@
+.class final Lcom/google/android/gms/internal/measurement/Tc;
+.super Landroid/database/ContentObserver;
+.source ""
+
+
+# instance fields
+.field private final synthetic a:Lcom/google/android/gms/internal/measurement/Sc;
+
+
+# direct methods
+.method constructor <init>(Lcom/google/android/gms/internal/measurement/Sc;Landroid/os/Handler;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/google/android/gms/internal/measurement/Tc;->a:Lcom/google/android/gms/internal/measurement/Sc;
+
+    const/4 p1, 0x0
+
+    invoke-direct {p0, p1}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final onChange(Z)V
+    .locals 0
+
+    iget-object p1, p0, Lcom/google/android/gms/internal/measurement/Tc;->a:Lcom/google/android/gms/internal/measurement/Sc;
+
+    invoke-virtual {p1}, Lcom/google/android/gms/internal/measurement/Sc;->b()V
+
+    iget-object p1, p0, Lcom/google/android/gms/internal/measurement/Tc;->a:Lcom/google/android/gms/internal/measurement/Sc;
+
+    invoke-static {p1}, Lcom/google/android/gms/internal/measurement/Sc;->a(Lcom/google/android/gms/internal/measurement/Sc;)V
+
+    return-void
+.end method
