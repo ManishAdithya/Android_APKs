@@ -1,0 +1,15 @@
+<svg id="event" xmlns="http://www.w3.org/2000/svg" width="27.438" height="28.834" viewBox="0 0 27.438 28.834">
+  <path id="Path_4775" data-name="Path 4775" d="M0,51.09H27.438v6.718H0Zm0,0" transform="translate(0 -48.12)" fill="#68dbaf"/>
+  <path id="Path_4776" data-name="Path 4776" d="M0,166.656H27.438V185.8H0Zm0,0" transform="translate(0 -156.968)" fill="#beeedd"/>
+  <g id="Group_5676" data-name="Group 5676" transform="translate(4.297 13.552)">
+    <path id="Path_4777" data-name="Path 4777" d="M73.926,233.121H78.1v4.094h-4.17Zm0,0" transform="translate(-73.926 -233.121)" fill="#fff"/>
+    <path id="Path_4778" data-name="Path 4778" d="M199.883,233.121h4.171v4.094h-4.171Zm0,0" transform="translate(-192.561 -233.121)" fill="#fff"/>
+    <path id="Path_4779" data-name="Path 4779" d="M331.488,233.121h4.17v4.094h-4.17Zm0,0" transform="translate(-316.515 -233.121)" fill="#fff"/>
+    <path id="Path_4780" data-name="Path 4780" d="M73.926,358.609H78.1V362.7h-4.17Zm0,0" transform="translate(-73.926 -351.314)" fill="#fff"/>
+  </g>
+  <path id="Path_4781" data-name="Path 4781" d="M204.053,361.319v1.355h-4.171v-4.065h4.171Zm0,0" transform="translate(-188.263 -337.762)" fill="#68dbaf"/>
+  <path id="Path_4782" data-name="Path 4782" d="M223.372,354.863a.23.23,0,0,1-.164-.068l-1.035-1.038a.232.232,0,1,1,.329-.328l.871.873,2.6-2.6a.232.232,0,1,1,.329.328l-2.761,2.768A.23.23,0,0,1,223.372,354.863Zm0,0" transform="translate(-209.193 -331.189)" fill="#239198"/>
+  <path id="Path_4783" data-name="Path 4783" d="M338.426,6.286a1.279,1.279,0,0,1-1.266-1.269V1.269a1.265,1.265,0,1,1,2.531,0V4.893a1.5,1.5,0,0,1-1.265,1.393Zm0,0" transform="translate(-317.561 0)" fill="#239198"/>
+  <path id="Path_4784" data-name="Path 4784" d="M213.387,6.286a1.278,1.278,0,0,1-1.265-1.269V1.269a1.265,1.265,0,1,1,2.531,0V4.893a1.5,1.5,0,0,1-1.265,1.393Zm0,0" transform="translate(-199.79 0)" fill="#239198"/>
+  <path id="Path_4785" data-name="Path 4785" d="M88.344,6.286a1.279,1.279,0,0,1-1.266-1.269V1.269a1.266,1.266,0,1,1,2.531,0V4.893a1.5,1.5,0,0,1-1.266,1.393Zm0,0" transform="translate(-82.016 0)" fill="#239198"/>
+</svg>

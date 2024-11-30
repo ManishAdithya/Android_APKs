@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="35.5" height="28.5" viewBox="0 0 35.5 28.5">
+  <g id="id-card" transform="translate(-1.75 -3.75)">
+    <path id="Path_7884" data-name="Path 7884" d="M13.222,13.389A3.889,3.889,0,1,1,9.333,9.5,3.889,3.889,0,0,1,13.222,13.389Zm-1.75,0A2.139,2.139,0,1,1,9.333,11.25,2.139,2.139,0,0,1,11.472,13.389Z" transform="translate(2.583 4.125)" fill="#fff" stroke="#fff" stroke-width="0.5" fill-rule="evenodd"/>
+    <path id="Path_7885" data-name="Path 7885" d="M6.25,19.875a3.792,3.792,0,1,1,7.583,0h1.75a5.542,5.542,0,1,0-11.083,0Z" transform="translate(1.875 7.75)" fill="#fff" stroke="#fff" stroke-width="0.5"/>
+    <g id="Group_7598" data-name="Group 7598" transform="translate(2 4)">
+      <path id="Path_7886" data-name="Path 7886" d="M23.875,10.875A.875.875,0,0,1,23,11.75H13.375a.875.875,0,0,1,0-1.75H23A.875.875,0,0,1,23.875,10.875Z" transform="translate(5.875 0.5)" fill="#fff" stroke="#fff" stroke-width="0.5" fill-rule="evenodd"/>
+      <path id="Path_7887" data-name="Path 7887" d="M23.875,13.875A.875.875,0,0,1,23,14.75H13.375a.875.875,0,0,1,0-1.75H23A.875.875,0,0,1,23.875,13.875Z" transform="translate(5.875 2.75)" fill="#fff" stroke="#fff" stroke-width="0.5" fill-rule="evenodd"/>
+      <path id="Path_7888" data-name="Path 7888" d="M23.875,16.875A.875.875,0,0,1,23,17.75H13.375a.875.875,0,0,1,0-1.75H23A.875.875,0,0,1,23.875,16.875Z" transform="translate(5.875 5)" fill="#fff" stroke="#fff" stroke-width="0.5" fill-rule="evenodd"/>
+      <path id="Path_7889" data-name="Path 7889" d="M14.25,4a2.625,2.625,0,0,0-2.625,2.625H6.375A4.375,4.375,0,0,0,2,11V27.625A4.375,4.375,0,0,0,6.375,32h26.25A4.375,4.375,0,0,0,37,27.625V11a4.375,4.375,0,0,0-4.375-4.375h-5.25A2.625,2.625,0,0,0,24.75,4ZM27.375,8.375A2.625,2.625,0,0,1,24.75,11H14.25a2.625,2.625,0,0,1-2.625-2.625H6.375A2.625,2.625,0,0,0,3.75,11V27.625A2.625,2.625,0,0,0,6.375,30.25h26.25a2.625,2.625,0,0,0,2.625-2.625V11a2.625,2.625,0,0,0-2.625-2.625Zm-14-1.75a.875.875,0,0,1,.875-.875h10.5a.875.875,0,0,1,.875.875v1.75a.875.875,0,0,1-.875.875H14.25a.875.875,0,0,1-.875-.875Z" transform="translate(-2 -4)" fill="#fff" stroke="#fff" stroke-width="0.5" fill-rule="evenodd"/>
+    </g>
+  </g>
+</svg>

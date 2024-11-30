@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="644" height="644" viewBox="0 0 644 644">
+  <defs>
+    <filter id="Ellipse_4051" x="0" y="0" width="644" height="644" filterUnits="userSpaceOnUse">
+      <feOffset dx="15" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="7.5" result="blur"/>
+      <feFlood/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Ellipse_4051-2" x="0" y="0" width="644" height="644" filterUnits="userSpaceOnUse">
+      <feOffset dx="15" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="7.5" result="blur-2"/>
+      <feFlood result="color"/>
+      <feComposite operator="out" in="SourceGraphic" in2="blur-2"/>
+      <feComposite operator="in" in="color"/>
+      <feComposite operator="in" in2="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g data-type="innerShadowGroup">
+    <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Ellipse_4051)">
+      <circle id="Ellipse_4051-3" data-name="Ellipse 4051" cx="239.5" cy="239.5" r="239.5" transform="translate(67.5 82.5)"/>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Ellipse_4051-2)">
+      <circle id="Ellipse_4051-4" data-name="Ellipse 4051" cx="239.5" cy="239.5" r="239.5" transform="translate(67.5 82.5)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

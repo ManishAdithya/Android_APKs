@@ -1,0 +1,8 @@
+<svg id="categories" xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25">
+  <g id="Group_5527" data-name="Group 5527">
+    <rect id="Rectangle_1208" data-name="Rectangle 1208" width="11" height="11" rx="4" fill="#00e083"/>
+    <rect id="Rectangle_1209" data-name="Rectangle 1209" width="11" height="11" rx="4" transform="translate(14)" fill="#00e083"/>
+    <rect id="Rectangle_1210" data-name="Rectangle 1210" width="11" height="11" rx="4" transform="translate(0 14)" fill="#00e083"/>
+  </g>
+  <circle id="Ellipse_448" data-name="Ellipse 448" cx="5.5" cy="5.5" r="5.5" transform="translate(14 14)" fill="#5e5e5e"/>
+</svg>

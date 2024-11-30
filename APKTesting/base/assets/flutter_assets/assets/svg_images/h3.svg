@@ -1,0 +1,17 @@
+<svg id="legal-document" xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <g id="Group_14085" data-name="Group 14085">
+    <path id="Path_33503" data-name="Path 33503" d="M380.609,228.417V25a10,10,0,0,0-10-10H25A10,10,0,0,0,15,25V487a10,10,0,0,0,10,10l345.473,0" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="30"/>
+    <line id="Line_274" data-name="Line 274" x2="115.78" transform="translate(85.482 228.855)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="30"/>
+    <line id="Line_275" data-name="Line 275" x2="115.78" transform="translate(85.482 168.851)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="30"/>
+    <line id="Line_276" data-name="Line 276" x2="223.699" transform="translate(85.482 108.847)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="30"/>
+    <line id="Line_277" data-name="Line 277" x2="115.78" transform="translate(85.482 288.451)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="30"/>
+    <line id="Line_278" data-name="Line 278" x2="115.78" transform="translate(85.482 338.454)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="30"/>
+    <line id="Line_279" data-name="Line 279" x2="115.78" transform="translate(85.482 398.458)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="30"/>
+    <g id="Group_14084" data-name="Group 14084">
+      <path id="Path_33504" data-name="Path 33504" d="M496.995,333.544l-.529-69.7a62.53,62.53,0,0,1-57.012-35.427l-120.147.887a62.5,62.5,0,0,1-56.468,36.265l.529,69.7c.445,58.63,32.271,112.661,83.685,142.072L381.416,497l34.061-20.162C466.438,446.669,497.44,392.174,496.995,333.544Z" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="30"/>
+    </g>
+  </g>
+  <g id="Group_14086" data-name="Group 14086">
+    <path id="Path_33505" data-name="Path 33505" d="M344.128,355.168l25.73,31.606,54.27-57.7" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="30"/>
+  </g>
+</svg>

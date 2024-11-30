@@ -1,0 +1,22 @@
+!!brut.androlib.apk.ApkInfo
+apkFileName: split_config.en.apk
+doNotCompress:
+- resources.arsc
+isFrameworkApk: false
+packageInfo:
+  forcedPackageId: '127'
+  renameManifestPackage: null
+resourcesAreCompressed: false
+sdkInfo: {}
+sharedLibrary: false
+sparseResources: true
+unknownFiles:
+  stamp-cert-sha256: '8'
+usesFramework:
+  ids:
+  - 1
+  tag: null
+version: 2.8.1
+versionInfo:
+  versionCode: '3'
+  versionName: null
