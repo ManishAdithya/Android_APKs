@@ -1,4 +1,4 @@
-# This file covers everything (important ones according to me 😅) from the Android security model to vulnerability analysis and exploitation techniques. Designed for quick reference, it’s perfect for security researchers, developers, and enthusiasts to ensure robust Android app security. Stay secure! 🔒
+## This file covers everything (important ones according to me 😅) from the Android security model to vulnerability analysis and exploitation techniques. Designed for quick reference, it’s perfect for security researchers, developers, and enthusiasts to ensure robust Android app security. Stay secure! 🔒
 
 # MY ANDROID NOTES (WILL BE UPDATING CONTINOUSLY)
 
