@@ -108,3 +108,62 @@ Below is the image , which givesa  good overview about the different folders in 
 ![AndroidApplicationFolders](images/AppFolders3.png)
 
 
+## ANDROID ARCHITECTURE
+
+## Application Components
+
+There are 4 main components of an Android application: 
+
+1. Activities
+2. Broadcast Receivers
+3. Content Providers
+4. Services
+
+These components interact with each other through Intents.
+
+![CompOfApp](images/CompOfApp.png)
+
+## Activities
+
+- Activities are basically screens that the user sees and interacts with visually.
+- One has to create a subclass of the "activity" class to create an activity. 
+- In this class, one has to override relavent callback methods that will be called when an activity is created, transitioned (paused, stopped, sent into the background), or destroyed
+- There are multiple callback methods, but the most important ones are OnCreate and OnPause. 
+
+OnCreate() -> This is where an activity is initialized, and every activity class implements this method. 
+              Usually, setContentView(Int) is called within OnCreate() and deines the UI of the screen/activity.
+              findViewById(Int) is used to find resources and interact with them programmatically.
+
+OnPause() ->  If a user decides to leave an activity, the saving of the state or imporant operations are performed by this method.
+
+Other importnat methods are OnStart(), OnRestart(), OnResume(), OnStop and OnDestroy().
+
+Below is the example image of the code in an OnCreate function:
+
+![OnCreate](images/OnCreate.png)
+
+   
+## Intents
+
+- Intents are messages through which other application components (activities, services and Broadcast Receivers) are activated. They can be  thought of as messages stating which operations/actions need to be performed.
+- Intnts themselves are objects containing information on operations to be performed or, in the case of Broadcast Receivers, on details of an event that occured.
+- Intent is a data structure desgined to hold information on events or operations to be performed. Intents contain two primary pieces of information:
+  - Action to be performed
+  - Data on which action will be performed, expressed as Uniform Resource Identifier (URI)
+
+![UseOfIntents](images/useofintents.png)
+
+
+**METHODS DELIVERING INTENTS TO COMPONENTS**
+
+1. Activity - Context.startActivity()Activity.startActivityForResult()
+2. Service - Context.startService()Context.bindService()
+3. Broadcast Receivers - Context.sendBroadcast()Context.sendOrderedBroadcase()
+
+There are other pieces of information tha can be provided in an Intent:
+
+1. **Category** - provides information on the category of action. If it is set to CATEGORY_LAUNCHED, this activity will appear in the application launcher.
+2. **Type** - provides explicit type of Intent data (thus bypassing built-in evaluation)
+3. **Component** - provides name of the component that will handle the Intent. This is not a required field. If it is empty, other information provided in the bundle will be used to identify the appropriate target.
+4. **Extras** - any additional information that needs to provided. These extra pieces of information through android.os.Bundle.
+
