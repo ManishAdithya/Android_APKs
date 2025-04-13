@@ -177,7 +177,7 @@ Intents can be classified into 2 types :
 2. Implicit Intents, on the other hand are used to invoke components of different applications ( e.g., a photo application sending an e-mail intent to the e-mail application to send a photo through an e-mail). They do not provide the specific component name to be invoked but rely on the system to find the best available component to be invoked.For this to be possible, each component can provide Intent-filters. 
    - Intent filters are structures that provide information on which Intents can be handled by particular components.
    - Intent filters provide a way to specify which Intents a component through implicit intent.
-   - Typical implicit intent :- Intent I = new Intent(Intent.ACTION_VIEW,Uri.parse (http://www.google.com));
+   - Typical implicit intent :- `Intent I = new Intent(Intent.ACTION_VIEW,Uri.parse (http://www.google.com));`
 
 The Intent field and their descriptions are as follows
 
@@ -190,4 +190,32 @@ An Example of an Intent declaration in the Manifest.xml file
 
 ## Broadcast Receivers
 
+- Broadcast Receivers deal with Intents.They are a means whereby Android applications and system components can communicate with each other by subscribing to certain Intents.
+- The receiver is dormant until it receives an activating Intent; it is then activated and performs a certain action.
+- After an intent is broadcasted, interested receivers having required permissions can be activated by the system.
+
+The Android Itself broadcasrs Intents for interested receivers. following is a list of Android System Broadcast Intents:
+
+![androidbroadcasts](images/AndroidBroadcasts.png)
+
+- The broadcasts dont have a UI of their own, the application will define an onReceive() method to receive and act on a broadcast.
+- The activity will need to extend the `android.content.BroadcastReceiver` class and implement the onRecieve().
+
+- An application can send broadcasts to itself or to other applications as well. Broadcast receivers need to be registered in the Manifest.xml file.
+- This enables the system to register your application to recieve particular broadcast.
+
+
+![broadcastreceivers](images/registeringrecievers.png)
+
+- When the system tried to deliver broadcasts to receivers, it checks the permissions of the receiver, If the receiver does not have the required permissions, it will not deliver the Intent.
+
+## Services
+
+- A service is an application component that can perform long-running operations in the background for an application. It does not have a UI component to it, but it executes tasks in the background - like the alarm or the music player.
+- In addition, an application component may "bound" itself to a service and thus interact with it in the background; for example, an application component can bind itself to a music player service and interact with it as needed.
+
+Thus a service can be in 2 states : 
+
+- Started 
+- Bound
 
