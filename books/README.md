@@ -142,7 +142,7 @@ Below is the example image of the code in an OnCreate function:
 
 ![OnCreate](images/OnCreate.png)
 
-## Intents
+### Intents
 
 - Intents are messages through which other application components (activities, services and Broadcast Receivers) are activated. They can be  thought of as messages stating which oper>
 - Intnts themselves are objects containing information on operations to be performed or, in the case of Broadcast Receivers, on details of an event that occured.
@@ -165,4 +165,29 @@ There are other pieces of information tha can be provided in an Intent:
 2. **Type** - provides explicit type of Intent data (thus bypassing built-in evaluation)
 3. **Component** - provides name of the component that will handle the Intent. This is not a required field. If it is empty, other information provided in the bundle will be used to >
 4. **Extras** - any additional information that needs to provided. These extra pieces of information through android.os.Bundle.
+
+Intents can be classified into 2 types : 
+
+1. Explicit 
+2. Implicit
+
+1. Explicit Intents provide the component name (class name) that must be invoked through the Intent. This is usually for inter-application components, since other application would not typically know the component names.
+   - Intent i = new Intent(this, <activity_name>.class);
+
+2. Implicit Intents, on the other hand are used to invoke components of different applications ( e.g., a photo application sending an e-mail intent to the e-mail application to send a photo through an e-mail). They do not provide the specific component name to be invoked but rely on the system to find the best available component to be invoked.For this to be possible, each component can provide Intent-filters. 
+   - Intent filters are structures that provide information on which Intents can be handled by particular components.
+   - Intent filters provide a way to specify which Intents a component through implicit intent.
+   - Typical implicit intent :- Intent I = new Intent(Intent.ACTION_VIEW,Uri.parse (http://www.google.com));
+
+The Intent field and their descriptions are as follows
+
+![intentfieldanddescription](images/intentFieldAndDescription.png)
+
+An Example of an Intent declaration in the Manifest.xml file
+
+![intentInManifest](images/intentInManifest.png)
+
+
+## Broadcast Receivers
+
 
