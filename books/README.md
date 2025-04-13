@@ -220,9 +220,9 @@ Thus a service can be in 2 states :
 - Bound
 
 
-- When an application component launches a service, it is "started". This is done through the startService() callback method. Once the service is started, it can continue to run in the background after the starting component is no longer executing.
-- An application can bind itself to a service by calling bindService(). A bound serivce can be used as a client-server mechanism, and a commponent can inteact with the service. The service will run only as long as the component is bound to it
-- Once it unbinds, the service is destroyed.
+1.  When an application component launches a service, it is "started". This is done through the startService() callback method. Once the service is started, it can continue to run in the background after the starting component is no longer executing.
+2.  An application can bind itself to a service by calling bindService(). A bound serivce can be used as a client-server mechanism, and a commponent can inteact with the service. The service will run only as long as the component is bound to it
+3.  Once it unbinds, the service is destroyed.
 
 To create a service, one must create a subclass of service and implement callback methods. Most important callback methods for service are OnStartcommand(), OnBind(), onCreate(), and OnDestroy()
 
@@ -256,7 +256,30 @@ This callback method is called when the service is no longer needed or being use
 - the Content provider like other components need to be declared in the Manifest.xml file. One can access the content provider by defining permissions inside the <provider> tag. One can set `android:readPermission` and `android:writePermission` t control the type of operations other application components can perform on contnet providers. 
 - the system will perform a check for requisiste permissions when Content.Resolver.query(), Content.resolver.delete(), Content.Resolver.insert(), Content.Resolver.update() and Content.Resolver.insert() methods are called.
 
+## Activity Lifecycles
+
+It is important to understand activity lifecycles, especially for developers, because when activites are switched or terminated certain callback methods need to be implemented. If an activity does not implement required callbacks, this can lead to performance and/or reliability issues.
+
+1. Activities are managed as an activity stack. When the user navigates an application,activites go through different states in their lifecyle.
+   - For example : When a new activity is started, it is put on the top of the stack and becomes the running activity, with previously running activity pushed below it on the stack.
+2. They system will call different lifecycle methods for different states of activites. It will call ither onCreate(), onRestart(), onStart(), or onResume() when an activity gains focus or comes to the foreground. The system will call a different set of callbacks (e.g., onPause()) when an activity loses focus.
 
 
+- Active/Running : Activity is in this state if it is in the forground and has user focus.
+- Pause : Activity is in this state if it has lost focus but is still visible, as non-full size activity has taken focus. Acitivity still retains state information and can be killed in case the system is low on resources.
+- Stopped : If an activity loses focus to a full-screen activity, then its state changed to Stopped. the activity still retains state information and can be killed in case the system is low in resources.
+- Inactive/Killed : A system can kill activity if it is in puased or stopped state. When re-launched, activity will have to initialize its state and member information again.
+
+The Activity lifecycle of an activity is as shown below : 
+
+![activitylifecycle](images/activityLifecycle.png)
+
+
+- Entire lifetime: the timeline of an activity between the first call to onCreate() and the call to onDestroy() is its entire lifetime. this includes all iterations that an activity will go through until it is destroyed. 
+- Visible lifetime: This lifetime corresponds to the time a user sees activiy on screen. This happens between one cycle of onStart() and onStop(). 
+- Foreground lifetime: This lifetime corresponds to the time that a user can actually interact with the activity. This happens between the call to onResume() and the call to onPause().
+
+
+![callbackdescription](images/callbackDescription.png)
 
 
