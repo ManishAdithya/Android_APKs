@@ -1,4 +1,4 @@
-# Android Architecture Overview
+# Android Architecture Overview (Chapter 2)
 
 Android can be considered as a software stack with the following layers:
 
@@ -108,7 +108,7 @@ Below is the image , which givesa  good overview about the different folders in 
 ![AndroidApplicationFolders](images/AppFolders3.png)
 
 
-## ANDROID ARCHITECTURE
+## ANDROID ARCHITECTURE (Chapter 3)
 
 ## Application Components
 
@@ -283,3 +283,44 @@ The Activity lifecycle of an activity is as shown below :
 ![callbackdescription](images/callbackDescription.png)
 
 
+## ANDROID (IN)SECURITY (Chapter 4)
+
+## Android Security Model 
+
+1. Android uses a visible two-tiered security model used by Android applications and enforced by Android. Android, at its core, relies on one of the security features provided by Linux kernel - running each application as a seperate process with its own set of data structures and preventing other processes from interfering with its execution.
+2. At the application layer, Android uses finer-grained permissions to allow (or disallow) applications or components to interact with other applications/components or critical resources. 
+3. User approval is required before an application can get to access to critical operations (e.g., making calls, sending SMS messages).
+4. By default, no application has permission to perform any operations that might adversely impact other applications, the user's data, or the system.
+
+
+- Each Android Application runs in a seperate DVM - `a sandbox`. However, the reader should not assume that this sandbox enforces security. The DVM is optimized for running on embedded devices effieciently, with a small footprint.It is pssible to break out of this sandbox VM, and, thus, it cannot be relied on to enforce security.
+- Android permission checks are not implemented inside the DVM but, rather, inside the Linux kernel code and enforced at runtime.
+- Access to low-level Linux facilities is provided through user and group ID enforcement, whereas addtional fine-grained security features are provided through Manifest permissions.
+
+## Permission enforcement - Linux
+
+- When a new application is installed on the Android platform, Android assigns it a unique user id (UID) and a group id (GID).Each installed application has a set of data structures and files that are associated with its UID and GID.
+- Permissions to access these structures and files are allowed only to the applcaiton itself (through its ID) or to the superuser (root).However, other application do not have elevated superuser priviledges (nor can they get them) and thus, cannot access other applications' files. 
+- If an application needs to share information with other applications or components, the MAC security model is enforced at the application layer.
+
+**NOTE**: Linux is a multi-ser multitasking OS. In contrast, Android is meant to deliver single-user experience. It leverages a security model meant for multiple user in Linux and applies to applications through Linux permissions.
+
+**NOTE**: Obtaining the shell through the emulator will give you the root user access. However, if you perform this test on the phone, you will be assigned a "system" or "shell" UID, unless, of course, you have rooted your phone.
+
+Each application installed on Android has an entry in the `data/data` directory. Below is the image of the `ls -l` command on this directory
+
+![ls -l](images/lsOndata.png)
+
+The output lists permissions for each directory along with owner(UID), group(GID), and other details. As the reader can see, any two-application directories are owned by respective UIDs.
+
+- The UID of an application is the owner of the process when the applcation runs. This enables it to acess files (owned by the UID), but any other process cannot directly access these files. They will have to communicate through allowed IPC mechanisms. Each process has its own address space during execution, including stack, heap and so forth.
+
+Below is the output of the "ps" command : 
+
+![ps](images/ps.png)
+
+`ps command` provides a list of proccess running and correspondin state information.
+
+- An application can request to share a UID by using `android:shareUserId` in the Manifest file. Android will grant the request if the application has been signed by the same certificate. An entry in the Manifest file to request the same UID looks like this :
+
+![shareUserId](images/shareuserid.png)
