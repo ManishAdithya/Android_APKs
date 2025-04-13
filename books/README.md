@@ -205,7 +205,7 @@ The Android Itself broadcasrs Intents for interested receivers. following is a l
 - This enables the system to register your application to recieve particular broadcast.
 
 
-![broadcastreceivers](images/registeringrecievers.png)
+![broadcastreceivers](images/registeringreceivers.png)
 
 - When the system tried to deliver broadcasts to receivers, it checks the permissions of the receiver, If the receiver does not have the required permissions, it will not deliver the Intent.
 
@@ -218,4 +218,45 @@ Thus a service can be in 2 states :
 
 - Started 
 - Bound
+
+
+- When an application component launches a service, it is "started". This is done through the startService() callback method. Once the service is started, it can continue to run in the background after the starting component is no longer executing.
+- An application can bind itself to a service by calling bindService(). A bound serivce can be used as a client-server mechanism, and a commponent can inteact with the service. The service will run only as long as the component is bound to it
+- Once it unbinds, the service is destroyed.
+
+To create a service, one must create a subclass of service and implement callback methods. Most important callback methods for service are OnStartcommand(), OnBind(), onCreate(), and OnDestroy()
+
+**onStartCommand()** :- 
+This callback method is called by the system when another application component requests a particular service to be started by calling startService(). This service then will run until it encounters stopSelf() or stopService()
+
+**onBind()** :-
+This callback method is called by the system when another application component requests a particular service to be started by calling startService(). This service then will run until it encounters stopSelf() or stopService().
+
+**onCreate()** :-
+When the service is first created, this method will perform initial setup before calling onStartCommand() or onBind().
+
+**OnDestroy()** :-
+This callback method is called when the service is no longer needed or being used.
+
+
+**NOTE** : he Android will stop a service in case it needs to recover system resources (e.g., it is low on memory).
+
+- Services are declared under <service> tag as a child of the <application> tag.A service can be declared as below:
+
+![servicedeclaration](images/serviceDeclaration.png)
+
+## Content Providers
+
+- Content privders provide applications with a means to share persistent data. A content provider can be thought of as a repository of data, and different applications can define content providers to access it.
+- Applications can share through intnets, but it is not the right way to share sensitive data.
+- Content providers aim to solve this problem, providers and provider clienrs enable a standard interface to share data in a secure and effiecient manner - for example, the Android's Contact Provider. 
+- When an application wants to access data in a content provider, it does so through the ContentResolver().
+
+
+- the Content provider like other components need to be declared in the Manifest.xml file. One can access the content provider by defining permissions inside the <provider> tag. One can set `android:readPermission` and `android:writePermission` t control the type of operations other application components can perform on contnet providers. 
+- the system will perform a check for requisiste permissions when Content.Resolver.query(), Content.resolver.delete(), Content.Resolver.insert(), Content.Resolver.update() and Content.Resolver.insert() methods are called.
+
+
+
+
 
