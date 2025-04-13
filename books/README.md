@@ -265,19 +265,19 @@ It is important to understand activity lifecycles, especially for developers, be
 2. They system will call different lifecycle methods for different states of activites. It will call ither onCreate(), onRestart(), onStart(), or onResume() when an activity gains focus or comes to the foreground. The system will call a different set of callbacks (e.g., onPause()) when an activity loses focus.
 
 
-- Active/Running : Activity is in this state if it is in the forground and has user focus.
-- Pause : Activity is in this state if it has lost focus but is still visible, as non-full size activity has taken focus. Acitivity still retains state information and can be killed in case the system is low on resources.
-- Stopped : If an activity loses focus to a full-screen activity, then its state changed to Stopped. the activity still retains state information and can be killed in case the system is low in resources.
-- Inactive/Killed : A system can kill activity if it is in puased or stopped state. When re-launched, activity will have to initialize its state and member information again.
+- **Active/Running** : Activity is in this state if it is in the forground and has user focus.
+- **Pause** : Activity is in this state if it has lost focus but is still visible, as non-full size activity has taken focus. Acitivity still retains state information and can be killed in case the system is low on resources.
+- **Stopped** : If an activity loses focus to a full-screen activity, then its state changed to Stopped. the activity still retains state information and can be killed in case the system is low in resources.
+- **Inactive/Killed** : A system can kill activity if it is in puased or stopped state. When re-launched, activity will have to initialize its state and member information again.
 
 The Activity lifecycle of an activity is as shown below : 
 
 ![activitylifecycle](images/activityLifecycle.png)
 
 
-- Entire lifetime: the timeline of an activity between the first call to onCreate() and the call to onDestroy() is its entire lifetime. this includes all iterations that an activity will go through until it is destroyed. 
-- Visible lifetime: This lifetime corresponds to the time a user sees activiy on screen. This happens between one cycle of onStart() and onStop(). 
-- Foreground lifetime: This lifetime corresponds to the time that a user can actually interact with the activity. This happens between the call to onResume() and the call to onPause().
+- **Entire lifetime**: the timeline of an activity between the first call to onCreate() and the call to onDestroy() is its entire lifetime. this includes all iterations that an activity will go through until it is destroyed. 
+- **Visible lifetime**: This lifetime corresponds to the time a user sees activiy on screen. This happens between one cycle of onStart() and onStop(). 
+- **Foreground lifetime**: This lifetime corresponds to the time that a user can actually interact with the activity. This happens between the call to onResume() and the call to onPause().
 
 
 ![callbackdescription](images/callbackDescription.png)
