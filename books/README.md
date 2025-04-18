@@ -324,3 +324,26 @@ Below is the output of the "ps" command :
 - An application can request to share a UID by using `android:shareUserId` in the Manifest file. Android will grant the request if the application has been signed by the same certificate. An entry in the Manifest file to request the same UID looks like this :
 
 ![shareUserId](images/shareuserid.png)
+
+## Android's Manifest permissions 
+
+- The Linux kernal sandboxes different applications and prevents them from accessing other application data or user information, or from performing operation such as acessing the Internet, making phone calls, or receiving SMS messages. 
+- If an application needs to perform the aforementioned operations, read user's information, or talk to other applications, the applications nned to specifically request these permissions (MAC model).
+- Applications declare these permissions in their configuration file (Manifest.xml).
+
+- Since an Android application cannot perform any operations that would advarsely impact the user's experience or access any data on the device by default, it needs to request these "protected" features explicitly. These are requested in the AndroidManifest.xml file and are usually called Manifest permissions.
+- Requested permissions are contained within <uses-permissions> tags within the file.
+
+Below is the example of requesting Internet access and reads SMS messages : 
+
+![internetandSMS](images/internetandsms.png)
+
+- An application can also define its own permissions, if the application wants to extend its functionality to other applications in the app, or id the application whats to enforce its own permissions (not known to the other applications).
+
+Below given is such an exmaple :
+
+[customperms](images/customperms.png)
+
+1. In the above snippet, `android:name` describes the name of a newly created permission, which can be used by applications through the <uses-permission> tag in the Manifest file.
+
+
