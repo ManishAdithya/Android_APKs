@@ -338,7 +338,7 @@ Below is the example of requesting Internet access and reads SMS messages :
 
 Below given is such an exmaple :
 
-[customperms](images/customperms.png)
+![customperms](images/customperms.png)
 
 1. In the above snippet, `android:name` describes the name of a newly created permission, which can be used by applications through the <uses-permission> tag in the Manifest file.
 
