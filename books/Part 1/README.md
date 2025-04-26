@@ -104,7 +104,7 @@ Below is the image , which givesa  good overview about the different folders in 
 
 ![AndroidApplicationFolders](images/AppFolders.png)
 
-## ANDROID ARCHITECTURE (Chapter 2)
+## ANDROID APPLICATION ARCHITECTURE (Chapter 2)
 
 ## Application Components
 
