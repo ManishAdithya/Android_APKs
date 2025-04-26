@@ -73,8 +73,7 @@ Below is a table that provides the Android version with its respective Linux ver
 
 - Below is an image of the Android tools available through SDK.
 
-![AndroidTools1](images/AndroidTools1.png)
-![AndroidTools2](images/AndroidTools2.png)
+![AndroidTools1](images/AndroidTools.png)
 
 ## DDMS
 
@@ -103,10 +102,7 @@ For adb commands, you can refer this notion page: https://lu77-u.notion.site/Com
 
 Below is the image , which givesa  good overview about the different folders in an Android application:
 
-![AndroidApplicationFolders](images/AppFolders1.png)
-![AndroidApplicationFolders](images/AppFolders2.png)
-![AndroidApplicationFolders](images/AppFolders3.png)
-
+![AndroidApplicationFolders](images/AppFolders.png)
 
 ## ANDROID ARCHITECTURE (Chapter 2)
 
