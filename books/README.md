@@ -1,4 +1,4 @@
-# Android Architecture Overview (Chapter 2)
+# Android Architecture Overview (Chapter 1)
 
 Android can be considered as a software stack with the following layers:
 
@@ -108,7 +108,7 @@ Below is the image , which givesa  good overview about the different folders in 
 ![AndroidApplicationFolders](images/AppFolders3.png)
 
 
-## ANDROID ARCHITECTURE (Chapter 3)
+## ANDROID ARCHITECTURE (Chapter 2)
 
 ## Application Components
 
@@ -283,7 +283,7 @@ The Activity lifecycle of an activity is as shown below :
 ![callbackdescription](images/callbackDescription.png)
 
 
-## ANDROID (IN)SECURITY (Chapter 4)
+## ANDROID (IN)SECURITY (Chapter 3)
 
 ## Android Security Model 
 
@@ -345,5 +345,88 @@ Below given is such an exmaple :
 [customperms](images/customperms.png)
 
 1. In the above snippet, `android:name` describes the name of a newly created permission, which can be used by applications through the <uses-permission> tag in the Manifest file.
+
+2. The `android:label` provides a short name for the permission (which is displayed to the user)
+
+3. `android:description` provides the user with information on the meaning of the permission. For example : the label can be **EXPENSIVE FEATURE**, while the description can be something like, “This feature will allow the application to send premium SMS messages and receive MMS. This can add to your costs as it will be charged to your airtime.”
+
+4. The `android:protectionLevel` defines the risk the user will be taking by allowing the application to use this permission. There are four different levels of protection categories
+
+
+- There are 4 different levels of protection categories : 
+    - **Normal** : This is the default value. It allows an application to get access to isolated features that pose minimal risk to other applciations, the user, ot the system. It is granted automatically by the system, but the user can still review it during the install time.
+
+    - **Dangerous** : Allows the application to perform certain operations that can cost the user money or use data in a way that can impact the user in a negative manner. The user needs to explicitly approve these permisions.
+
+    - **Signature** : Granted only if the application signed with the same certificate as the application that declared the permission.
+
+    - **System** : Granted onlt to the applications that are in the Android system image or that are signed with the same certificates as those in the system image.
+
+
+- There are multiple instances in which permission can be enforced : 
+    - When an application is executing 
+    - When an application executes certain functions that it is not authorized to 
+    - When an application starts an activity which it is not authorized to
+    - When an application sends or receiver broadcasts.
+    - When accessing/Updating Content providers.
+    - When an application starts a service.
+
+## Few popular Android Attacks - A WalkThrough :
+
+In the first week of Match 2011, a malware-DroidDream-hit the Android platform. Android is a much more open platform compared to iOS and thus has a lenient marketplace policy. Various ways to get applications on Android are as follows: 
+
+1. Official Android MArket (Google)
+2. Secondary Android markets. 
+3. Regional Android markets (like in China and Korea)
+4. Sites providing APK files to the users.
+
+- Similar to popular Android malware such as Geinimi and HongTouTou, DroidDream was "hidden" or "obfuscated" inside a legitimate-looking application. regular users having no reasons to distrust the Android market downloaded the application and ended up having an infected device.
+
+- DroidDream and its variants gained access to sensitive user and device information and even obtained root access.
+
+**Analysis of the DroidDream**
+
+- Below were the permissions that were asked in the Manifest: 
+    - READ_PHONE_STATE
+    - SET_WALLPAPER
+    - INTERNET
+
+- From the permission requested, it appears to be a wallpaper application.However, it wants to access the phone state, as well. An application having access to this permission can access the following information: 
+    - IMEI number (Device ID)
+    - Phone number
+    - Sim Serial Number
+    - IMSI (Subscriber serial number)
+
+- Below is the snippet of code that would enable an application to obtain sensitive phone information: 
+
+![malware](images/DroidDream.png)
+
+- After the malware has obtained the aobve device information, it can potentially send it to the remote server. This is possible, because the malware has requested the permission `android.permission.INTERNET`
+
+**Analysis of Zsone**
+
+This was a Trojan which was distributed user different names (iCalender, iMatch, and others). It hit the ANdroid platform during summer of 2011 and tried to send SMS messages without user's permissions. 
+
+- Upon analysis of the Manifest file of the app, below were the permissions requested. 
+
+![malware](images/zsone.png)
+
+- None of the permissions requested by the application relate to its functionality—that is, a calendar application. Essentially, the ability to send and receive SMS, provide location based on CELL-ID or Wi-FI, and read the phone state all point to a malicious application.
+
+
+**Analysis of Zitmo Trojan**
+
+Most of the leading banks today offer mobile banking applications. Initially, banks used simple one-factor authentication (username and password) to allow users to log on to the bank’s mobile site and view financial information. Since it is easier to defeat this form of authentication (cracking passwords, MITM, social engineering), banks have started to rely on two-factor authentication. In addition to the passwords, they will usually send an SMS message (a five-to-six digit one-time PIN) to the user’s cell phone device and require this as part of the overall authentication process.
+
+- The Zitmo Trojan on ANdroid ims to defeat this mechanism by intercepting SMS messages that are sent by the banks to its customers, 
+
+- This Trojan also aids the `Zeus Kit`, The Zeus kit is installed when an unsuspecting user visits a malicious site. 
+
+- Installed of the Zeus Kit enables attackers to steal credentials - one part of the two-factor authentication. INstalling Zitmo provides then with the second - TAN messages from the bank.
+
+
+
+
+
 
 
